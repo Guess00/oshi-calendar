@@ -15,6 +15,26 @@ function formatBadgeCount(n) {
   return count > 99 ? "99+" : String(count);
 }
 
+const SEEN_STORAGE_KEY = "oshi-tweets-seen-v1";
+
+function loadSeenMap() {
+  try {
+    const raw = localStorage.getItem(SEEN_STORAGE_KEY);
+    const parsed = raw ? JSON.parse(raw) : {};
+    return parsed && typeof parsed === "object" ? parsed : {};
+  } catch {
+    return {};
+  }
+}
+
+function saveSeenMap(map) {
+  try {
+    localStorage.setItem(SEEN_STORAGE_KEY, JSON.stringify(map));
+  } catch {
+    // Ignore storage quota or private mode errors
+  }
+}
+
 export function createTweetsController({
   seiyuuList,
   tweetsData,
@@ -25,6 +45,28 @@ export function createTweetsController({
   // Strictly preserve fixed order from data/seiyuu.json (never re-sort by update count)
   const tweetAccounts = seiyuuList.filter((s) => s.showInTweetTab !== false && s.xHandle);
   let activeId = tweetAccounts[0]?.id || null;
+  const seenMap = loadSeenMap();
+
+  const getVersionKey = (seiyuuId) => {
+    const bucket = tweetsData?.accounts?.[seiyuuId] || {};
+    return bucket.lastCheckedAt || tweetsData?.updatedAt || "";
+  };
+
+  const getVisibleBadgeCount = (seiyuuId) => {
+    const bucket = tweetsData?.accounts?.[seiyuuId] || {};
+    const count = Number(bucket.newCount) || 0;
+    if (count <= 0) return 0;
+    const versionKey = getVersionKey(seiyuuId);
+    if (versionKey && seenMap[seiyuuId] === versionKey) return 0;
+    return count;
+  };
+
+  const markAccountSeen = (seiyuuId) => {
+    const versionKey = getVersionKey(seiyuuId);
+    if (!versionKey) return;
+    seenMap[seiyuuId] = versionKey;
+    saveSeenMap(seenMap);
+  };
 
   const updatePointerPosition = () => {
     const pointerEl = bannerEl.querySelector(".account-banner-pointer");
@@ -57,8 +99,7 @@ export function createTweetsController({
     railEl.innerHTML = tweetAccounts
       .map((s) => {
         const isActive = s.id === activeId;
-        const bucket = tweetsData?.accounts?.[s.id] || {};
-        const badgeText = formatBadgeCount(bucket.newCount);
+        const badgeText = formatBadgeCount(getVisibleBadgeCount(s.id));
         return `
           <button
             type="button"
@@ -178,7 +219,7 @@ export function createTweetsController({
         }
 
         const actorLabel = isStaff
-          ? `${mergedMeta?.label || `${seiyuu.name} Staff`}（@${item.accountHandle || mergedMeta?.handle || "staff"}）`
+          ? mergedMeta?.label || `${seiyuu.name} Staff`
           : seiyuu.name;
 
         const descLine = isRt
@@ -209,6 +250,7 @@ export function createTweetsController({
     const btn = e.target.closest(".avatar-item");
     if (!btn) return;
     activeId = btn.dataset.accountId;
+    markAccountSeen(activeId);
     renderRail();
     renderFeed();
     const newActive = railEl.querySelector(`.avatar-item[data-account-id="${CSS.escape(activeId)}"]`);
