@@ -1,0 +1,56 @@
+{
+  "seiyuu": [
+    {
+      "id": "tachibana-azusa",
+      "name": "橘杏咲",
+      "kana": "たちばな あずさ",
+      "romaji": "Azusa Tachibana",
+      "agency": "アイムエンタープライズ",
+      "agencyUrl": "https://www.imenterprise.jp/profile.php?id=125",
+      "accentColor": "#ec7644",
+      "accentSoft": "#fff1ea",
+      "avatar": "assets/avatars/tachibana-azusa.jpg",
+      "xHandle": "anzusaku1012",
+      "xUrl": "https://x.com/anzusaku1012",
+      "showInTweetTab": true,
+      "scheduleOnlyXHandles": [
+        {
+          "handle": "pazyanai_chan",
+          "name": "パジャナイ公式",
+          "url": "https://x.com/pazyanai_chan",
+          "category": "program"
+        }
+      ],
+      "anilistSearch": "Azusa Tachibana",
+      "anilistId": 337852,
+      "eventernoteId": "71494",
+      "eventernoteName": "橘杏咲",
+      "youtubeChannels": [
+        {
+          "name": "GA文庫チャンネル",
+          "handle": "@GABunkoCH",
+          "channelId": "UC43H8s_LItL4ppe6-STQBSA",
+          "keywords": [
+            "パジャマナイト",
+            "パジャナイ",
+            "橘杏咲"
+          ],
+          "category": "program",
+          "label": "パジャナイ"
+        }
+      ],
+      "recurringRules": [
+        {
+          "id": "seigura-column",
+          "type": "monthly",
+          "dayOfMonth": 1,
+          "time": null,
+          "title": "声優グランプリ コラム『橘杏咲の立ち話もなんですから！』更新",
+          "category": "column",
+          "note": "毎月1日更新 · seigura.com",
+          "url": "https://seigura.com/"
+        }
+      ]
+    }
+  ]
+}

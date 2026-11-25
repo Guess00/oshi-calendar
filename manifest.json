@@ -1,0 +1,16 @@
+{
+  "name": "Oshi Calendar",
+  "short_name": "OshiCal",
+  "description": "女声优行程与推特更新记录（JST 0-24）",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#faf8f5",
+  "theme_color": "#ec7644",
+  "icons": [
+    {
+      "src": "assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

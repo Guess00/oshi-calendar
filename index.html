@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#ec7644" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <title>Oshi Calendar · 声优行程与推特记录</title>
+  <link rel="icon" type="image/svg+xml" href="assets/icon.svg" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="top-header">
+      <div class="header-row">
+        <div class="brand">
+          <img class="brand-icon" src="assets/icon.svg" alt="" width="28" height="28" />
+          <div class="brand-text">
+            <h1 id="site-title">Oshi Calendar</h1>
+            <span class="updated-meta" id="updated-at">读取中…</span>
+          </div>
+        </div>
+        <button id="theme-toggle" class="icon-btn" type="button" aria-label="切换深浅色主题" title="切换深浅色主题">
+          <span id="theme-icon" aria-hidden="true">🌙</span>
+        </button>
+      </div>
+
+      <section class="tokyo-clock-card" aria-label="东京当前时间">
+        <div class="clock-left">
+          <span class="clock-badge">TOKYO · JST</span>
+          <div class="clock-date" id="jst-date">----年--月--日（-）</div>
+        </div>
+        <div class="clock-time" id="jst-time">--:--:--</div>
+      </section>
+
+      <nav class="tab-bar" role="tablist" aria-label="功能切换">
+        <button
+          id="tab-schedule"
+          class="tab-btn is-active"
+          type="button"
+          role="tab"
+          aria-selected="true"
+          aria-controls="view-schedule"
+          data-tab="schedule"
+        >
+          <span>日程</span>
+        </button>
+        <button
+          id="tab-tweets"
+          class="tab-btn"
+          type="button"
+          role="tab"
+          aria-selected="false"
+          aria-controls="view-tweets"
+          data-tab="tweets"
+        >
+          <span>推特记录</span>
+        </button>
+      </nav>
+    </header>
+
+    <main class="main-content">
+      <!-- 日程视图 -->
+      <section id="view-schedule" class="tab-panel is-active" role="tabpanel" aria-labelledby="tab-schedule">
+        <div class="schedule-toolbar">
+          <div class="mode-switch" role="group" aria-label="视图模式">
+            <button id="mode-single" class="pill-btn is-active" type="button" data-mode="single">单日</button>
+            <button id="mode-all" class="pill-btn" type="button" data-mode="all">前后一周</button>
+          </div>
+          <div class="toolbar-right">
+            <div id="schedule-seiyuu-filter" class="seiyuu-chips" hidden></div>
+            <button id="btn-today" class="today-btn" type="button">回今天</button>
+          </div>
+        </div>
+
+        <div class="date-strip-wrap">
+          <div id="date-strip" class="date-strip" role="listbox" aria-label="选择日期（当日东京时间前后一周）"></div>
+        </div>
+
+        <div id="schedule-list" class="schedule-list" aria-live="polite">
+          <div class="empty-state">正在加载行程数据…</div>
+        </div>
+      </section>
+
+      <!-- 推特记录视图（INS 风格） -->
+      <section id="view-tweets" class="tab-panel" role="tabpanel" aria-labelledby="tab-tweets" hidden>
+        <div class="avatar-rail-wrap">
+          <div id="tweet-avatar-rail" class="avatar-rail" role="tablist" aria-label="选择声优账号"></div>
+        </div>
+
+        <div id="tweet-account-header" class="account-banner" hidden></div>
+
+        <div id="tweet-feed" class="tweet-feed" aria-live="polite">
+          <div class="empty-state">正在加载推特记录…</div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <span>所有日期与时间均为日本标准时间（JST 0–24 时制）</span>
+    </footer>
+  </div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

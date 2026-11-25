@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="azusa" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffaa6c" />
+      <stop offset="55%" stop-color="#f0784e" />
+      <stop offset="100%" stop-color="#d85b6a" />
+    </linearGradient>
+  </defs>
+  <circle cx="64" cy="64" r="64" fill="url(#azusa)" />
+  <circle cx="64" cy="64" r="56" fill="none" stroke="rgba(255,255,255,0.32)" stroke-width="2" />
+  <text x="64" y="77" text-anchor="middle" font-family="'Hiragino Sans', 'Yu Gothic', 'Microsoft YaHei', sans-serif" font-size="46" font-weight="700" fill="#ffffff">杏</text>
+</svg>

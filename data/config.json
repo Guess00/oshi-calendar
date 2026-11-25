@@ -1,0 +1,9 @@
+{
+  "siteTitle": "Oshi Calendar",
+  "siteSubtitle": "声优行程 · 推特更新记录",
+  "repoName": "oshi-calendar",
+  "githubOwner": "Guess00",
+  "timezone": "Asia/Tokyo",
+  "pushMode": "W1",
+  "scheduleWindowDays": 7
+}
