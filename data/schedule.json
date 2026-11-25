@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T03:08:52+09:00",
+  "updatedAt": "2026-11-26T03:58:48+09:00",
   "events": [
     {
       "id": "youtube:aimi:WAggkIoRwCQ",
@@ -176,11 +176,11 @@
         "aimi"
       ],
       "date": "2026-11-25",
-      "time": null,
+      "time": "21:00",
       "title": "チームY 生配信",
       "category": "program",
       "source": "tweet",
-      "note": "夜生配信（详见原推）",
+      "note": "21:00頃〜 · YouTube「チームY」生配信",
       "url": "https://x.com/aimi_sound/status/2125586224081772856"
     },
     {

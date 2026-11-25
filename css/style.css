@@ -874,6 +874,48 @@ a.event-row:hover {
   color: var(--cat-anime-fg);
 }
 
+/* Tweet Type Filter Pills */
+.tweet-filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 10px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding-bottom: 2px;
+}
+
+.tweet-filter-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.tweet-filter-pill {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  border-radius: 999px;
+  padding: 5px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.tweet-filter-pill.is-active {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.tweet-filter-count {
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+  opacity: 0.78;
+}
+
 /* Tweet Log Feed */
 .tweet-feed {
   display: flex;
@@ -929,14 +971,24 @@ a.event-row:hover {
   color: var(--accent);
 }
 
+.tweet-type.is-quote {
+  background: var(--cat-program-bg);
+  color: var(--cat-program-fg);
+}
+
 .tweet-type.is-rt {
   background: var(--cat-guest-bg);
   color: var(--cat-guest-fg);
 }
 
-.tweet-pin {
-  font-size: 10px;
-  font-weight: 700;
+.tweet-type.is-reply {
+  background: var(--cat-radio-bg);
+  color: var(--cat-radio-fg);
+}
+
+.tweet-media-tag {
+  font-size: 11px;
+  font-weight: 600;
   padding: 2px 7px;
   border-radius: 6px;
   background: var(--bg-subtle);
@@ -946,14 +998,17 @@ a.event-row:hover {
 .tweet-time-line {
   font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
   font-variant-numeric: tabular-nums;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
-  color: var(--text);
+  color: var(--text-muted);
 }
 
 .tweet-desc-line {
-  font-size: 13px;
-  color: var(--text-muted);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.45;
+  color: var(--text);
+  word-break: break-word;
 }
 
 .tweet-open-icon {

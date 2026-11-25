@@ -17,6 +17,39 @@ function formatBadgeCount(n) {
 
 const SEEN_STORAGE_KEY = "oshi-tweets-seen-v1";
 
+const FILTER_OPTIONS = [
+  { id: "all", label: "全部" },
+  { id: "post", label: "发推" }, // original + quote
+  { id: "rt", label: "转发" }, // pure RT
+  { id: "reply", label: "回复" }, // reply
+];
+
+function matchesFilter(item, filterId) {
+  if (filterId === "all") return true;
+  if (filterId === "post") return item.type === "original" || item.type === "quote";
+  if (filterId === "rt") return item.type === "rt";
+  if (filterId === "reply") return item.type === "reply";
+  return true;
+}
+
+function getTypeMeta(type) {
+  if (type === "quote") return { label: "引用", cls: "is-quote" };
+  if (type === "rt") return { label: "转发", cls: "is-rt" };
+  if (type === "reply") return { label: "回复", cls: "is-reply" };
+  return { label: "发推", cls: "is-original" };
+}
+
+function formatMediaTag(item) {
+  if (!item.media) return "";
+  if (item.media === "photo") {
+    const cnt = Number(item.mediaCount) || 1;
+    return cnt > 1 ? `📷 ${cnt}图` : "📷 图";
+  }
+  if (item.media === "video") return "🎬 视频";
+  if (item.media === "gif") return "🎞️ GIF";
+  return "";
+}
+
 function loadSeenMap() {
   try {
     const raw = localStorage.getItem(SEEN_STORAGE_KEY);
@@ -40,11 +73,13 @@ export function createTweetsController({
   tweetsData,
   railEl,
   bannerEl,
+  filterEl,
   feedEl,
 }) {
   // Strictly preserve fixed order from data/seiyuu.json (never re-sort by update count)
   const tweetAccounts = seiyuuList.filter((s) => s.showInTweetTab !== false && s.xHandle);
   let activeId = tweetAccounts[0]?.id || null;
+  let activeFilter = "all";
   const seenMap = loadSeenMap();
 
   const getVersionKey = (seiyuuId) => {
@@ -128,16 +163,39 @@ export function createTweetsController({
       .join("");
   };
 
+  const renderFilters = (items) => {
+    if (!filterEl) return;
+    filterEl.hidden = false;
+    filterEl.innerHTML = FILTER_OPTIONS.map((opt) => {
+      const count = items.filter((it) => matchesFilter(it, opt.id)).length;
+      const isActive = activeFilter === opt.id;
+      return `
+        <button
+          type="button"
+          role="tab"
+          aria-selected="${isActive}"
+          class="tweet-filter-pill ${isActive ? "is-active" : ""}"
+          data-filter="${opt.id}"
+        >
+          <span>${opt.label}</span>
+          <span class="tweet-filter-count">${count}</span>
+        </button>
+      `;
+    }).join("");
+  };
+
   const renderFeed = () => {
     const seiyuu = tweetAccounts.find((s) => s.id === activeId);
     if (!seiyuu) {
       bannerEl.hidden = true;
+      if (filterEl) filterEl.hidden = true;
       feedEl.innerHTML = `<div class="empty-state">尚未配置关注账号。</div>`;
       return;
     }
 
     const bucket = tweetsData?.accounts?.[seiyuu.id] || {};
-    const items = Array.isArray(bucket.items) ? bucket.items : [];
+    // Always exclude pinned tweets from display
+    const items = (Array.isArray(bucket.items) ? bucket.items : []).filter((it) => !it.pinned);
     const profileUrl = bucket.profileUrl || seiyuu.xUrl || `https://x.com/${seiyuu.xHandle}`;
     const mergedHandles = Array.isArray(seiyuu.mergedXHandles) ? seiyuu.mergedXHandles : [];
     const hasMerged = mergedHandles.length > 0;
@@ -173,7 +231,10 @@ export function createTweetsController({
       ${linksHtml}
     `;
 
+    renderFilters(items);
     requestAnimationFrame(updatePointerPosition);
+
+    const visibleItems = items.filter((it) => matchesFilter(it, activeFilter));
 
     if (items.length === 0) {
       feedEl.innerHTML = `
@@ -185,13 +246,21 @@ export function createTweetsController({
       return;
     }
 
-    // Preserve exact array order from tweets.json (mirrors X profile order / merged newest-first order)
-    feedEl.innerHTML = items
+    if (visibleItems.length === 0) {
+      const optLabel = FILTER_OPTIONS.find((o) => o.id === activeFilter)?.label || "该分类";
+      feedEl.innerHTML = `
+        <div class="empty-state">近期暂无「${escapeHtml(optLabel)}」记录。</div>
+      `;
+      return;
+    }
+
+    feedEl.innerHTML = visibleItems
       .map((item) => {
         const isRt = item.type === "rt";
-        const typeLabel = isRt ? "转推 RT" : "发推";
-        const typeClass = isRt ? "is-rt" : "is-original";
+        const isReply = item.type === "reply";
+        const typeMeta = getTypeMeta(item.type);
         const formattedTime = formatDisplayDateTime(item.postedAtJst);
+        const mediaTagText = formatMediaTag(item);
 
         const isStaff = item.accountRole === "staff";
         const mergedMeta = isStaff
@@ -208,7 +277,7 @@ export function createTweetsController({
         if (isRt) {
           timeLine = formattedTime
             ? `原推 ${formattedTime} JST`
-            : "转推（按主页顺序排列）";
+            : "转发（按主页顺序排列）";
         } else if (formattedTime) {
           timeLine =
             item.timePrecision === "approx"
@@ -222,19 +291,28 @@ export function createTweetsController({
           ? mergedMeta?.label || `${seiyuu.name} Staff`
           : seiyuu.name;
 
-        const descLine = isRt
-          ? item.originalAuthor
-            ? `${actorLabel} 转推了 @${item.originalAuthor} 的一条推特`
-            : `${actorLabel} 转推了一条推特`
-          : `${actorLabel} 更新了一条推特`;
+        let descLine = item.summary ? String(item.summary).trim() : "";
+        if (!descLine) {
+          if (isRt) {
+            descLine = item.originalAuthor
+              ? `${actorLabel} 转发了 @${item.originalAuthor} 的一条推特`
+              : `${actorLabel} 转发了一条推特`;
+          } else if (isReply) {
+            descLine = item.replyTo
+              ? `${actorLabel} 回复了 @${item.replyTo}`
+              : `${actorLabel} 回复了一条推特`;
+          } else {
+            descLine = `${actorLabel} 更新了一条推特`;
+          }
+        }
 
         return `
           <a class="tweet-card" href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer">
             <div class="tweet-card-main">
               <div class="tweet-badges">
                 ${sourceBadgeHtml}
-                <span class="tweet-type ${typeClass}">${typeLabel}</span>
-                ${item.pinned ? `<span class="tweet-pin">置顶</span>` : ""}
+                <span class="tweet-type ${typeMeta.cls}">${typeMeta.label}</span>
+                ${mediaTagText ? `<span class="tweet-media-tag">${escapeHtml(mediaTagText)}</span>` : ""}
               </div>
               <div class="tweet-time-line">${escapeHtml(timeLine)}</div>
               <div class="tweet-desc-line">${escapeHtml(descLine)}</div>
@@ -250,11 +328,19 @@ export function createTweetsController({
     const btn = e.target.closest(".avatar-item");
     if (!btn) return;
     activeId = btn.dataset.accountId;
+    activeFilter = "all";
     markAccountSeen(activeId);
     renderRail();
     renderFeed();
     const newActive = railEl.querySelector(`.avatar-item[data-account-id="${CSS.escape(activeId)}"]`);
     newActive?.scrollIntoView({ behavior: "smooth", inline: "nearest", block: "nearest" });
+  });
+
+  filterEl?.addEventListener("click", (e) => {
+    const btn = e.target.closest(".tweet-filter-pill");
+    if (!btn) return;
+    activeFilter = btn.dataset.filter || "all";
+    renderFeed();
   });
 
   // Track pointer position when user horizontally scrolls the INS avatar rail

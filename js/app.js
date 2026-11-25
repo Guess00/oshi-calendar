@@ -128,6 +128,7 @@ async function bootstrap() {
       tweetsData,
       railEl: document.getElementById("tweet-avatar-rail"),
       bannerEl: document.getElementById("tweet-account-header"),
+      filterEl: document.getElementById("tweet-filter-bar"),
       feedEl: document.getElementById("tweet-feed"),
     });
     tweetsCtrl.onTabActivated();
