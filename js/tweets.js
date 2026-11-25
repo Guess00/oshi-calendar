@@ -9,6 +9,12 @@ function escapeHtml(str) {
     .replaceAll("'", "&#39;");
 }
 
+function formatBadgeCount(n) {
+  const count = Number(n) || 0;
+  if (count <= 0) return "";
+  return count > 99 ? "99+" : String(count);
+}
+
 export function createTweetsController({
   seiyuuList,
   tweetsData,
@@ -16,8 +22,32 @@ export function createTweetsController({
   bannerEl,
   feedEl,
 }) {
+  // Strictly preserve fixed order from data/seiyuu.json (never re-sort by update count)
   const tweetAccounts = seiyuuList.filter((s) => s.showInTweetTab !== false && s.xHandle);
   let activeId = tweetAccounts[0]?.id || null;
+
+  const updatePointerPosition = () => {
+    const pointerEl = bannerEl.querySelector(".account-banner-pointer");
+    const activeEl = railEl.querySelector(`.avatar-item[data-account-id="${CSS.escape(activeId || "")}"]`);
+    if (!pointerEl || !activeEl || bannerEl.hidden) return;
+
+    const bannerRect = bannerEl.getBoundingClientRect();
+    const avatarRect = activeEl.getBoundingClientRect();
+    if (bannerRect.width === 0 || avatarRect.width === 0) return;
+
+    const targetCenter = avatarRect.left + avatarRect.width / 2 - bannerRect.left;
+    const minX = 18;
+    const maxX = bannerRect.width - 18;
+
+    if (targetCenter < 6 || targetCenter > bannerRect.width - 6) {
+      pointerEl.classList.add("is-hidden");
+      return;
+    }
+
+    pointerEl.classList.remove("is-hidden");
+    const clampedX = Math.max(minX, Math.min(maxX, targetCenter));
+    bannerEl.style.setProperty("--pointer-x", `${clampedX.toFixed(1)}px`);
+  };
 
   const renderRail = () => {
     if (tweetAccounts.length === 0) {
@@ -27,6 +57,8 @@ export function createTweetsController({
     railEl.innerHTML = tweetAccounts
       .map((s) => {
         const isActive = s.id === activeId;
+        const bucket = tweetsData?.accounts?.[s.id] || {};
+        const badgeText = formatBadgeCount(bucket.newCount);
         return `
           <button
             type="button"
@@ -35,10 +67,17 @@ export function createTweetsController({
             class="avatar-item ${isActive ? "is-active" : ""}"
             data-account-id="${escapeHtml(s.id)}"
           >
-            <span class="avatar-ring">
-              <span class="avatar-inner">
-                <img class="avatar-img" src="${escapeHtml(s.avatar)}" alt="${escapeHtml(s.name)}" loading="lazy" />
+            <span class="avatar-ring-wrap">
+              <span class="avatar-ring">
+                <span class="avatar-inner">
+                  <img class="avatar-img" src="${escapeHtml(s.avatar)}" alt="${escapeHtml(s.name)}" loading="lazy" />
+                </span>
               </span>
+              ${
+                badgeText
+                  ? `<span class="avatar-badge" aria-label="本次新增 ${escapeHtml(badgeText)} 条">${escapeHtml(badgeText)}</span>`
+                  : ""
+              }
             </span>
             <span class="avatar-name">${escapeHtml(s.name)}</span>
             <span class="avatar-handle">@${escapeHtml(s.xHandle)}</span>
@@ -65,12 +104,15 @@ export function createTweetsController({
 
     bannerEl.hidden = false;
     bannerEl.innerHTML = `
+      <span class="account-banner-pointer" aria-hidden="true"></span>
       <div class="account-banner-left">
         <div class="account-banner-title">${escapeHtml(seiyuu.name)} · @${escapeHtml(seiyuu.xHandle)}</div>
-        <div class="account-banner-sub">按 X 主页从上到下顺序（原创 + RT） · 共 ${items.length} 条 · ${escapeHtml(checkedLabel)}</div>
+        <div class="account-banner-sub">共 ${items.length} 条 · ${escapeHtml(checkedLabel)}</div>
       </div>
       <a class="profile-link-btn" href="${escapeHtml(profileUrl)}" target="_blank" rel="noopener noreferrer">X 主页 ↗</a>
     `;
+
+    requestAnimationFrame(updatePointerPosition);
 
     if (items.length === 0) {
       feedEl.innerHTML = `
@@ -133,8 +175,34 @@ export function createTweetsController({
     activeId = btn.dataset.accountId;
     renderRail();
     renderFeed();
+    const newActive = railEl.querySelector(`.avatar-item[data-account-id="${CSS.escape(activeId)}"]`);
+    newActive?.scrollIntoView({ behavior: "smooth", inline: "nearest", block: "nearest" });
+  });
+
+  // Track pointer position when user horizontally scrolls the INS avatar rail
+  railEl.addEventListener("scroll", () => {
+    requestAnimationFrame(updatePointerPosition);
+  }, { passive: true });
+
+  // Desktop convenience: vertical mouse wheel scrolls avatar rail horizontally when overflowing
+  railEl.addEventListener("wheel", (e) => {
+    if (railEl.scrollWidth <= railEl.clientWidth) return;
+    if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+      e.preventDefault();
+      railEl.scrollLeft += e.deltaY;
+    }
+  }, { passive: false });
+
+  window.addEventListener("resize", () => {
+    requestAnimationFrame(updatePointerPosition);
   });
 
   renderRail();
   renderFeed();
+
+  return {
+    onTabActivated() {
+      requestAnimationFrame(updatePointerPosition);
+    },
+  };
 }

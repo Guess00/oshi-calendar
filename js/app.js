@@ -32,7 +32,7 @@ function initTheme() {
   });
 }
 
-function initTabs() {
+function initTabs(onTabChange) {
   const tabBtns = Array.from(document.querySelectorAll(".tab-btn"));
   const panels = {
     schedule: document.getElementById("view-schedule"),
@@ -52,6 +52,7 @@ function initTabs() {
       panel.classList.toggle("is-active", active);
     }
     history.replaceState(null, "", `#${tabName}`);
+    onTabChange?.(tabName);
   };
 
   for (const btn of tabBtns) {
@@ -66,14 +67,21 @@ function initTabs() {
 
 async function bootstrap() {
   initTheme();
-  initTabs();
+
+  let scheduleCtrl = null;
+  let tweetsCtrl = null;
+
+  initTabs((tabName) => {
+    if (tabName === "tweets") {
+      tweetsCtrl?.onTabActivated();
+    }
+  });
 
   const timeEl = document.getElementById("jst-time");
   const dateEl = document.getElementById("jst-date");
   const updatedEl = document.getElementById("updated-at");
   const siteTitleEl = document.getElementById("site-title");
 
-  let scheduleCtrl = null;
   startTokyoClock({
     timeEl,
     dateEl,
@@ -115,13 +123,14 @@ async function bootstrap() {
       modeAllBtn: document.getElementById("mode-all"),
     });
 
-    createTweetsController({
+    tweetsCtrl = createTweetsController({
       seiyuuList,
       tweetsData,
       railEl: document.getElementById("tweet-avatar-rail"),
       bannerEl: document.getElementById("tweet-account-header"),
       feedEl: document.getElementById("tweet-feed"),
     });
+    tweetsCtrl.onTabActivated();
   } catch (err) {
     console.error(err);
     const listEl = document.getElementById("schedule-list");

@@ -650,16 +650,17 @@ a.event-row:hover {
 
 /* INS-Style Twitter Tab */
 .avatar-rail-wrap {
-  margin: 0 -16px 12px;
-  padding: 4px 16px 10px;
-  border-bottom: 1px solid var(--border);
+  margin: 0 -16px 10px;
+  padding: 6px 16px 4px;
 }
 
 .avatar-rail {
   display: flex;
   gap: 14px;
   overflow-x: auto;
-  padding: 2px 2px 4px;
+  padding: 4px 2px 6px;
+  scroll-snap-type: x proximity;
+  -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
 }
 
@@ -670,6 +671,7 @@ a.event-row:hover {
 .avatar-item {
   flex: 0 0 auto;
   width: 78px;
+  scroll-snap-align: start;
   border: none;
   background: transparent;
   padding: 0;
@@ -678,6 +680,16 @@ a.event-row:hover {
   align-items: center;
   gap: 5px;
   text-align: center;
+  position: relative;
+}
+
+.avatar-ring-wrap {
+  position: relative;
+  width: 66px;
+  height: 66px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .avatar-ring {
@@ -690,6 +702,27 @@ a.event-row:hover {
   align-items: center;
   justify-content: center;
   transition: transform 0.16s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.avatar-badge {
+  position: absolute;
+  top: -2px;
+  right: -3px;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 5px;
+  border-radius: 999px;
+  background: #e53935;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  line-height: 18px;
+  text-align: center;
+  border: 2px solid var(--bg);
+  box-shadow: 0 2px 6px rgba(229, 57, 53, 0.35);
+  pointer-events: none;
+  z-index: 2;
 }
 
 .avatar-item.is-active .avatar-ring {
@@ -745,8 +778,9 @@ a.event-row:hover {
   color: var(--accent);
 }
 
-/* Account Banner */
+/* Account Banner with protruding pointer arrow */
 .account-banner {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -755,8 +789,28 @@ a.event-row:hover {
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   padding: 12px 14px;
+  margin-top: 8px;
   margin-bottom: 12px;
   box-shadow: var(--shadow-sm);
+}
+
+.account-banner-pointer {
+  position: absolute;
+  top: -7px;
+  left: var(--pointer-x, 39px);
+  width: 12px;
+  height: 12px;
+  background: var(--bg-elevated);
+  border-top: 1px solid var(--border);
+  border-left: 1px solid var(--border);
+  border-top-left-radius: 2px;
+  transform: translateX(-50%) rotate(45deg);
+  pointer-events: none;
+  transition: left 0.16s ease, opacity 0.14s ease;
+}
+
+.account-banner-pointer.is-hidden {
+  opacity: 0;
 }
 
 .account-banner-left {
