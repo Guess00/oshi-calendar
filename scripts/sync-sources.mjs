@@ -211,14 +211,14 @@ async function syncAniListForSeiyuu(seiyuu, minDate, maxDate) {
       const jst = toTokyoParts(new Date(ep.airingAt * 1000));
       if (jst.date < minDate || jst.date > maxDate) continue;
       results.push({
-        id: `anilist:${seiyuu.id}:${ep.mediaId}:ep${ep.episode}`,
+        id: `anilist:${ep.mediaId}:ep${ep.episode}`,
         seiyuuIds: [seiyuu.id],
         date: jst.date,
         time: jst.time,
         title: `${info.title} 第${ep.episode}話`,
         category: "anime",
         source: "anilist",
-        note: info.chars.length ? `CV: ${info.chars.join(" / ")}` : "TVアニメ放送・配信",
+        note: info.chars.length ? `CV: ${info.chars.join(" / ")}（${seiyuu.name}）` : "TVアニメ放送・配信",
         url: info.siteUrl,
       });
     }
@@ -300,7 +300,7 @@ async function syncEventernoteForSeiyuu(seiyuu, minDate, maxDate) {
     if (venue) noteParts.push(venue);
 
     events.push({
-      id: `eventernote:${seiyuu.id}:${eventId}`,
+      id: `eventernote:${eventId}`,
       seiyuuIds: [seiyuu.id],
       date: norm.date,
       time: norm.time,
@@ -510,15 +510,27 @@ async function main() {
     if (ev.date && ev.date < keepHistoryAfter) return false;
     if (ev.source === "manual" || ev.source === "tweet") return true;
     if (ev.source === "rule") return false;
-    const ownerId = ev.seiyuuIds?.[0];
-    const sourceKey = `${ev.source}:${ownerId}`;
-    return !succeededSources.has(sourceKey);
+    const owners = ev.seiyuuIds || [];
+    return owners.some((ownerId) => !succeededSources.has(`${ev.source}:${ownerId}`));
   });
 
-  // Deduplicate by id (preferring freshAutoEvents for auto sources, preserving manual/tweet)
+  // Deduplicate by id, merging seiyuuIds & notes when multiple tracked seiyuu share an event/anime
   const mergedMap = new Map();
-  for (const ev of preservedEvents) mergedMap.set(ev.id, ev);
-  for (const ev of freshAutoEvents) mergedMap.set(ev.id, ev);
+  const upsertEvent = (ev) => {
+    const prev = mergedMap.get(ev.id);
+    if (!prev) {
+      mergedMap.set(ev.id, { ...ev, seiyuuIds: [...(ev.seiyuuIds || [])] });
+      return;
+    }
+    const mergedIds = [...new Set([...(prev.seiyuuIds || []), ...(ev.seiyuuIds || [])])];
+    let mergedNote = prev.note || "";
+    if (ev.note && !mergedNote.includes(ev.note)) {
+      mergedNote = mergedNote ? `${mergedNote} / ${ev.note}` : ev.note;
+    }
+    mergedMap.set(ev.id, { ...prev, ...ev, seiyuuIds: mergedIds, note: mergedNote });
+  };
+  for (const ev of preservedEvents) upsertEvent(ev);
+  for (const ev of freshAutoEvents) upsertEvent(ev);
 
   const mergedEvents = Array.from(mergedMap.values()).sort((a, b) => {
     if (a.date !== b.date) return a.date.localeCompare(b.date);

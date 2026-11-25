@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T02:19:12+09:00",
+  "updatedAt": "2026-11-26T02:54:12+09:00",
   "accounts": {
     "tachibana-azusa": {
       "handle": "anzusaku1012",
@@ -150,6 +150,325 @@
           "postedAtJst": "2026-11-10 18:56",
           "timePrecision": "minute",
           "url": "https://x.com/anzusaku1012/status/2120093170352746818"
+        }
+      ]
+    },
+    "aimi": {
+      "handle": "aimi_sound",
+      "mergedHandles": [
+        "aimistaff"
+      ],
+      "profileUrl": "https://x.com/aimi_sound",
+      "lastCheckedAt": "2026-11-26T02:54:12+09:00",
+      "newCount": 28,
+      "items": [
+        {
+          "id": "2118251632186327064",
+          "type": "original",
+          "pinned": true,
+          "accountRole": "self",
+          "accountHandle": "aimi_sound",
+          "accountBadge": "本人",
+          "postedAtJst": "2026-11-05 16:58",
+          "timePrecision": "minute",
+          "url": "https://x.com/aimi_sound/status/2118251632186327064"
+        },
+        {
+          "id": "2125560309037592976",
+          "type": "original",
+          "pinned": true,
+          "accountRole": "staff",
+          "accountHandle": "aimistaff",
+          "accountBadge": "Staff",
+          "postedAtJst": "2026-11-25 21:00",
+          "timePrecision": "minute",
+          "url": "https://x.com/aimistaff/status/2125560309037592976"
+        },
+        {
+          "id": "2125597444402729184",
+          "type": "original",
+          "pinned": false,
+          "accountRole": "self",
+          "accountHandle": "aimi_sound",
+          "accountBadge": "本人",
+          "postedAtJst": "2026-11-25 23:28",
+          "timePrecision": "minute",
+          "url": "https://x.com/aimi_sound/status/2125597444402729184"
+        },
+        {
+          "id": "2125586224081772856",
+          "type": "original",
+          "pinned": false,
+          "accountRole": "self",
+          "accountHandle": "aimi_sound",
+          "accountBadge": "本人",
+          "postedAtJst": "2026-11-25 22:43",
+          "timePrecision": "minute",
+          "url": "https://x.com/aimi_sound/status/2125586224081772856"
+        },
+        {
+          "id": "2125552581556465762",
+          "type": "original",
+          "pinned": false,
+          "accountRole": "staff",
+          "accountHandle": "aimistaff",
+          "accountBadge": "Staff",
+          "postedAtJst": "2026-11-25 20:30",
+          "timePrecision": "minute",
+          "url": "https://x.com/aimistaff/status/2125552581556465762"
+        },
+        {
+          "id": "2125529439673200750",
+          "type": "original",
+          "pinned": false,
+          "accountRole": "self",
+          "accountHandle": "aimi_sound",
+          "accountBadge": "本人",
+          "postedAtJst": "2026-11-25 18:58",
+          "timePrecision": "minute",
+          "url": "https://x.com/aimi_sound/status/2125529439673200750"
+        },
+        {
+          "id": "2125450892690571614",
+          "type": "original",
+          "pinned": false,
+          "accountRole": "self",
+          "accountHandle": "aimi_sound",
+          "accountBadge": "本人",
+          "postedAtJst": "2026-11-25 13:45",
+          "timePrecision": "minute",
+          "url": "https://x.com/aimi_sound/status/2125450892690571614"
+        },
+        {
+          "id": "2125436932348071986",
+          "type": "original",
+          "pinned": false,
+          "accountRole": "self",
+          "accountHandle": "aimi_sound",
+          "accountBadge": "本人",
+          "postedAtJst": "2026-11-25 12:50",
+          "timePrecision": "minute",
+          "url": "https://x.com/aimi_sound/status/2125436932348071986"
+        },
+        {
+          "id": "2125197751025914085",
+          "type": "original",
+          "pinned": false,
+          "accountRole": "staff",
+          "accountHandle": "aimistaff",
+          "accountBadge": "Staff",
+          "postedAtJst": "2026-11-24 21:00",
+          "timePrecision": "minute",
+          "url": "https://x.com/aimistaff/status/2125197751025914085"
+        },
+        {
+          "id": "2124871325600919980",
+          "type": "original",
+          "pinned": false,
+          "accountRole": "self",
+          "accountHandle": "aimi_sound",
+          "accountBadge": "本人",
+          "postedAtJst": "2026-11-23 23:22",
+          "timePrecision": "minute",
+          "url": "https://x.com/aimi_sound/status/2124871325600919980"
+        },
+        {
+          "id": "2124795252271878326",
+          "type": "original",
+          "pinned": false,
+          "accountRole": "self",
+          "accountHandle": "aimi_sound",
+          "accountBadge": "本人",
+          "postedAtJst": "2026-11-23 18:20",
+          "timePrecision": "minute",
+          "url": "https://x.com/aimi_sound/status/2124795252271878326"
+        },
+        {
+          "id": "2124499604456743245",
+          "type": "original",
+          "pinned": false,
+          "accountRole": "self",
+          "accountHandle": "aimi_sound",
+          "accountBadge": "本人",
+          "postedAtJst": "2026-11-22 22:45",
+          "timePrecision": "minute",
+          "url": "https://x.com/aimi_sound/status/2124499604456743245"
+        },
+        {
+          "id": "2124059077433250104",
+          "type": "original",
+          "pinned": false,
+          "accountRole": "self",
+          "accountHandle": "aimi_sound",
+          "accountBadge": "本人",
+          "postedAtJst": "2026-11-21 17:35",
+          "timePrecision": "minute",
+          "url": "https://x.com/aimi_sound/status/2124059077433250104"
+        },
+        {
+          "id": "2124048708291686573",
+          "type": "original",
+          "pinned": false,
+          "accountRole": "self",
+          "accountHandle": "aimi_sound",
+          "accountBadge": "本人",
+          "postedAtJst": "2026-11-21 16:54",
+          "timePrecision": "minute",
+          "url": "https://x.com/aimi_sound/status/2124048708291686573"
+        },
+        {
+          "id": "2124042267141062898",
+          "type": "original",
+          "pinned": false,
+          "accountRole": "self",
+          "accountHandle": "aimi_sound",
+          "accountBadge": "本人",
+          "postedAtJst": "2026-11-21 16:28",
+          "timePrecision": "minute",
+          "url": "https://x.com/aimi_sound/status/2124042267141062898"
+        },
+        {
+          "id": "2123809335205867859",
+          "type": "original",
+          "pinned": false,
+          "accountRole": "self",
+          "accountHandle": "aimi_sound",
+          "accountBadge": "本人",
+          "postedAtJst": "2026-11-21 01:02",
+          "timePrecision": "minute",
+          "url": "https://x.com/aimi_sound/status/2123809335205867859"
+        },
+        {
+          "id": "2123738672491347993",
+          "type": "original",
+          "pinned": false,
+          "accountRole": "self",
+          "accountHandle": "aimi_sound",
+          "accountBadge": "本人",
+          "postedAtJst": "2026-11-20 20:22",
+          "timePrecision": "minute",
+          "url": "https://x.com/aimi_sound/status/2123738672491347993"
+        },
+        {
+          "id": "2123702912589140066",
+          "type": "original",
+          "pinned": false,
+          "accountRole": "staff",
+          "accountHandle": "aimistaff",
+          "accountBadge": "Staff",
+          "postedAtJst": "2026-11-20 18:00",
+          "timePrecision": "minute",
+          "url": "https://x.com/aimistaff/status/2123702912589140066"
+        },
+        {
+          "id": "2123612306676527146",
+          "type": "original",
+          "pinned": false,
+          "accountRole": "staff",
+          "accountHandle": "aimistaff",
+          "accountBadge": "Staff",
+          "postedAtJst": "2026-11-20 12:00",
+          "timePrecision": "minute",
+          "url": "https://x.com/aimistaff/status/2123612306676527146"
+        },
+        {
+          "id": "2123417237210198424",
+          "type": "original",
+          "pinned": false,
+          "accountRole": "self",
+          "accountHandle": "aimi_sound",
+          "accountBadge": "本人",
+          "postedAtJst": "2026-11-19 23:04",
+          "timePrecision": "minute",
+          "url": "https://x.com/aimi_sound/status/2123417237210198424"
+        },
+        {
+          "id": "2122645931074232758",
+          "type": "original",
+          "pinned": false,
+          "accountRole": "staff",
+          "accountHandle": "aimistaff",
+          "accountBadge": "Staff",
+          "postedAtJst": "2026-11-17 20:00",
+          "timePrecision": "minute",
+          "url": "https://x.com/aimistaff/status/2122645931074232758"
+        },
+        {
+          "id": "2122541651059208293",
+          "type": "original",
+          "pinned": false,
+          "accountRole": "staff",
+          "accountHandle": "aimistaff",
+          "accountBadge": "Staff",
+          "postedAtJst": "2026-11-17 13:05",
+          "timePrecision": "minute",
+          "url": "https://x.com/aimistaff/status/2122541651059208293"
+        },
+        {
+          "id": "2122162745441480842",
+          "type": "original",
+          "pinned": false,
+          "accountRole": "staff",
+          "accountHandle": "aimistaff",
+          "accountBadge": "Staff",
+          "postedAtJst": "2026-11-16 12:00",
+          "timePrecision": "minute",
+          "url": "https://x.com/aimistaff/status/2122162745441480842"
+        },
+        {
+          "id": "2121941204564877570",
+          "type": "original",
+          "pinned": false,
+          "accountRole": "staff",
+          "accountHandle": "aimistaff",
+          "accountBadge": "Staff",
+          "postedAtJst": "2026-11-15 21:19",
+          "timePrecision": "minute",
+          "url": "https://x.com/aimistaff/status/2121941204564877570"
+        },
+        {
+          "id": "2121931530763374984",
+          "type": "original",
+          "pinned": false,
+          "accountRole": "staff",
+          "accountHandle": "aimistaff",
+          "accountBadge": "Staff",
+          "postedAtJst": "2026-11-15 20:41",
+          "timePrecision": "minute",
+          "url": "https://x.com/aimistaff/status/2121931530763374984"
+        },
+        {
+          "id": "2121843429630198242",
+          "type": "original",
+          "pinned": false,
+          "accountRole": "staff",
+          "accountHandle": "aimistaff",
+          "accountBadge": "Staff",
+          "postedAtJst": "2026-11-15 14:51",
+          "timePrecision": "minute",
+          "url": "https://x.com/aimistaff/status/2121843429630198242"
+        },
+        {
+          "id": "2121816143241646491",
+          "type": "original",
+          "pinned": false,
+          "accountRole": "staff",
+          "accountHandle": "aimistaff",
+          "accountBadge": "Staff",
+          "postedAtJst": "2026-11-15 13:02",
+          "timePrecision": "minute",
+          "url": "https://x.com/aimistaff/status/2121816143241646491"
+        },
+        {
+          "id": "2121619175374299290",
+          "type": "original",
+          "pinned": false,
+          "accountRole": "staff",
+          "accountHandle": "aimistaff",
+          "accountBadge": "Staff",
+          "postedAtJst": "2026-11-15 00:00",
+          "timePrecision": "minute",
+          "url": "https://x.com/aimistaff/status/2121619175374299290"
         }
       ]
     }

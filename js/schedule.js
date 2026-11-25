@@ -9,6 +9,7 @@ const CATEGORY_META = {
   anime: { label: "番剧", cls: "cat-anime" },
   event: { label: "线下活动", cls: "cat-event" },
   program: { label: "节目", cls: "cat-program" },
+  radio: { label: "广播", cls: "cat-radio" },
   guest: { label: "嘉宾", cls: "cat-guest" },
   column: { label: "专栏", cls: "cat-column" },
   other: { label: "其他", cls: "cat-other" },

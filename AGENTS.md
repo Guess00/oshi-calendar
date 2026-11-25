@@ -14,14 +14,14 @@
    - 固定周期规则（如每月 1 号声グラ专栏）
    - **禁止覆盖** `data/schedule.json` 中已有的 `source: "manual"` 或已确认的 `source: "tweet"` 条目。
 3. **巡检推特主页（内置 `browser` 子代理）**：
-   - 访问 `data/seiyuu.json` 中每个声优的 `xHandle`（展示在推特记录 Tab）以及 `scheduleOnlyXHandles`（仅用于挖掘日程，不写入推特记录头像栏）。
+   - 访问 `data/seiyuu.json` 中每个声优的 `xHandle`（展示在推特记录 Tab）、`mergedXHandles`（如 Staff 号，合并展示在该声优的同一个头像流下并标明 `accountRole: "staff"` 区分本人与 Staff）以及 `scheduleOnlyXHandles`（仅用于挖掘日程，不写入推特记录头像栏）。
    - 若 `x.com` 提示需要登录，请暂停并请用户在浏览器面板手动登录一次后继续。
    - **仅采集主页的原创推文 + 转推（RT），放弃 Replies**。
    - **提取日程**：阅读近期推文与转推正文，识别未收录的新嘉宾出演、生放送、线下活动、专栏/节目预告，转换为标准 **JST 0–24 小时制（`00:00–23:59`）**，与 `data/schedule.json` 现有条目严格去重后写入（`source: "tweet"`）。
-   - **维护 `data/tweets.json`**：只为 `xHandle` 账号写入极简更新记录，**严禁保存推文正文、图片或视频**：
+   - **维护 `data/tweets.json`**：只为 `xHandle`（及合并其 `mergedXHandles`）写入极简更新记录，**严禁保存推文正文、图片或视频**：
      - 头像栏顺序严格由 `data/seiyuu.json` 数组顺序定死，**绝不按更新条数调整声优顺序**。
      - 每次更新时对比该账号上一次的 `items` ID 集合，计算本次新增的推文条数写入该账号的 `newCount` 字段（用于头像右上角红点数字提示；本次无新增则写 `0`，前端不显示红点）。
-     - 数组顺序必须严格保持 **X 主页从上到下的顺序**（最新在最上面；置顶推文标记 `pinned: true`）。
+     - 若存在 `mergedXHandles`（如本人号 + Staff 号合并），每条必须标注 `accountRole`（`"self"` / `"staff"`）与 `accountHandle`，合并后按最新在最上排序（置顶标记 `pinned: true`）；单个账号则严格保持 **X 主页从上到下的顺序**。
      - 原创推文优先从 `<time datetime="...">` 提取精确到分钟的 JST 时间（`YYYY-MM-DD HH:mm`，`timePrecision: "minute"`），拿不到再填大致时间（`timePrecision: "approx"`）。
      - 转推（RT）标记 `type: "rt"`，保留其在 X 主页中的准确相对位置，时间记录原推发布时间（JST）并直链原推 URL。
 4. **更新时间戳与校验**：

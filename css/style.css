@@ -22,6 +22,8 @@
   --cat-event-fg: #c93b63;
   --cat-program-bg: #fff2e4;
   --cat-program-fg: #c76419;
+  --cat-radio-bg: #e6f4ff;
+  --cat-radio-fg: #1b6ca8;
   --cat-guest-bg: #e7f7f2;
   --cat-guest-fg: #147a5e;
   --cat-column-bg: #f7f0df;
@@ -51,6 +53,8 @@
   --cat-event-fg: #ff9ab5;
   --cat-program-bg: rgba(245, 152, 66, 0.18);
   --cat-program-fg: #ffb978;
+  --cat-radio-bg: rgba(76, 179, 255, 0.18);
+  --cat-radio-fg: #84ccff;
   --cat-guest-bg: rgba(54, 196, 153, 0.18);
   --cat-guest-fg: #72e0be;
   --cat-column-bg: rgba(224, 179, 77, 0.18);
@@ -586,6 +590,7 @@ a.event-row:hover {
 .cat-anime { background: var(--cat-anime-bg); color: var(--cat-anime-fg); }
 .cat-event { background: var(--cat-event-bg); color: var(--cat-event-fg); }
 .cat-program { background: var(--cat-program-bg); color: var(--cat-program-fg); }
+.cat-radio { background: var(--cat-radio-bg); color: var(--cat-radio-fg); }
 .cat-guest { background: var(--cat-guest-bg); color: var(--cat-guest-fg); }
 .cat-column { background: var(--cat-column-bg); color: var(--cat-column-fg); }
 .cat-other { background: var(--cat-other-bg); color: var(--cat-other-fg); }
@@ -830,6 +835,13 @@ a.event-row:hover {
   color: var(--text-muted);
 }
 
+.account-banner-links {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
 .profile-link-btn {
   flex-shrink: 0;
   font-size: 12px;
@@ -838,6 +850,28 @@ a.event-row:hover {
   border-radius: 999px;
   background: var(--accent-soft);
   color: var(--accent);
+}
+
+.profile-link-btn.is-secondary {
+  background: var(--bg-subtle);
+  color: var(--text-muted);
+}
+
+.tweet-source {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+.tweet-source.is-self {
+  background: var(--cat-event-bg);
+  color: var(--cat-event-fg);
+}
+
+.tweet-source.is-staff {
+  background: var(--cat-anime-bg);
+  color: var(--cat-anime-fg);
 }
 
 /* Tweet Log Feed */

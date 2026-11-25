@@ -1,6 +1,19 @@
 {
-  "updatedAt": "2026-11-26T02:04:09+09:00",
+  "updatedAt": "2026-11-26T03:08:52+09:00",
   "events": [
+    {
+      "id": "youtube:aimi:WAggkIoRwCQ",
+      "seiyuuIds": [
+        "aimi"
+      ],
+      "date": "2026-11-13",
+      "time": "12:00",
+      "title": "【グルメ】東京・小平駅のワンマンライブ会場を下見してごはんを食べよう😋‼️【カフェ】",
+      "category": "program",
+      "source": "youtube",
+      "note": "AIMI official YouTube Channel · 公式YouTube",
+      "url": "https://www.youtube.com/watch?v=WAggkIoRwCQ"
+    },
     {
       "id": "youtube:tachibana-azusa:6VDgl5LxVqE",
       "seiyuuIds": [
@@ -15,7 +28,59 @@
       "url": "https://www.youtube.com/watch?v=6VDgl5LxVqE"
     },
     {
-      "id": "anilist:tachibana-azusa:209219:ep7",
+      "id": "rule:aimi:yakousei-jiron:2026-11-13",
+      "seiyuuIds": [
+        "aimi"
+      ],
+      "date": "2026-11-13",
+      "time": "23:00",
+      "title": "愛美と千春の夜行性自論",
+      "category": "radio",
+      "source": "rule",
+      "note": "毎週金曜 23:00配信 · AuDee Podcasts Membership（愛美・千春）",
+      "url": "https://audee-membership.jp/"
+    },
+    {
+      "id": "anilist:204650:ep7",
+      "seiyuuIds": [
+        "aimi"
+      ],
+      "date": "2026-11-13",
+      "time": "23:30",
+      "title": "桃源暗鬼 日光・華厳の滝編 第7話",
+      "category": "anime",
+      "source": "anilist",
+      "note": "CV: 漣水鶏（愛美）",
+      "url": "https://anilist.co/anime/204650"
+    },
+    {
+      "id": "eventernote:482709",
+      "seiyuuIds": [
+        "aimi"
+      ],
+      "date": "2026-11-15",
+      "time": "17:00",
+      "title": "AIMI ASIA TOUR 2026 STAR RISING in Hong Kong",
+      "category": "event",
+      "source": "eventernote",
+      "note": "開場 16:00 / 開演 17:00 / 終演 18:40 · TIDES",
+      "url": "https://www.eventernote.com/events/482709"
+    },
+    {
+      "id": "rule:aimi:kizuna-radio:2026-11-16",
+      "seiyuuIds": [
+        "aimi"
+      ],
+      "date": "2026-11-16",
+      "time": "20:30",
+      "title": "話しTARINAI！キズナラジオ！",
+      "category": "radio",
+      "source": "rule",
+      "note": "毎週月曜 20:30〜21:00 · ニッポン放送（翌火曜 HiBiKi 配信）",
+      "url": "https://www.1242.com/"
+    },
+    {
+      "id": "anilist:209219:ep7",
       "seiyuuIds": [
         "tachibana-azusa"
       ],
@@ -24,11 +89,11 @@
       "title": "転生ゴブリンだけど質問ある？ 第7話",
       "category": "anime",
       "source": "anilist",
-      "note": "CV: クロエ",
+      "note": "CV: クロエ（橘杏咲）",
       "url": "https://anilist.co/anime/209219"
     },
     {
-      "id": "anilist:tachibana-azusa:211778:ep7",
+      "id": "anilist:211778:ep7",
       "seiyuuIds": [
         "tachibana-azusa"
       ],
@@ -37,11 +102,37 @@
       "title": "世界最強の魔女、始めました 第7話",
       "category": "anime",
       "source": "anilist",
-      "note": "CV: ローナ・ハーミット",
+      "note": "CV: ローナ・ハーミット（橘杏咲）",
       "url": "https://anilist.co/anime/211778"
     },
     {
-      "id": "eventernote:tachibana-azusa:498065",
+      "id": "rule:aimi:yakousei-jiron:2026-11-20",
+      "seiyuuIds": [
+        "aimi"
+      ],
+      "date": "2026-11-20",
+      "time": "23:00",
+      "title": "愛美と千春の夜行性自論",
+      "category": "radio",
+      "source": "rule",
+      "note": "毎週金曜 23:00配信 · AuDee Podcasts Membership（愛美・千春）",
+      "url": "https://audee-membership.jp/"
+    },
+    {
+      "id": "anilist:204650:ep8",
+      "seiyuuIds": [
+        "aimi"
+      ],
+      "date": "2026-11-20",
+      "time": "23:30",
+      "title": "桃源暗鬼 日光・華厳の滝編 第8話",
+      "category": "anime",
+      "source": "anilist",
+      "note": "CV: 漣水鶏（愛美）",
+      "url": "https://anilist.co/anime/204650"
+    },
+    {
+      "id": "eventernote:498065",
       "seiyuuIds": [
         "tachibana-azusa"
       ],
@@ -54,7 +145,20 @@
       "url": "https://www.eventernote.com/events/498065"
     },
     {
-      "id": "anilist:tachibana-azusa:209219:ep8",
+      "id": "rule:aimi:kizuna-radio:2026-11-23",
+      "seiyuuIds": [
+        "aimi"
+      ],
+      "date": "2026-11-23",
+      "time": "20:30",
+      "title": "話しTARINAI！キズナラジオ！",
+      "category": "radio",
+      "source": "rule",
+      "note": "毎週月曜 20:30〜21:00 · ニッポン放送（翌火曜 HiBiKi 配信）",
+      "url": "https://www.1242.com/"
+    },
+    {
+      "id": "anilist:209219:ep8",
       "seiyuuIds": [
         "tachibana-azusa"
       ],
@@ -63,11 +167,37 @@
       "title": "転生ゴブリンだけど質問ある？ 第8話",
       "category": "anime",
       "source": "anilist",
-      "note": "CV: クロエ",
+      "note": "CV: クロエ（橘杏咲）",
       "url": "https://anilist.co/anime/209219"
     },
     {
-      "id": "anilist:tachibana-azusa:211778:ep8",
+      "id": "tweet:aimi:2125436932348071986",
+      "seiyuuIds": [
+        "aimi"
+      ],
+      "date": "2026-11-25",
+      "time": null,
+      "title": "チームY 生配信",
+      "category": "program",
+      "source": "tweet",
+      "note": "夜生配信（详见原推）",
+      "url": "https://x.com/aimi_sound/status/2125586224081772856"
+    },
+    {
+      "id": "youtube:aimi:zrpdgy2vX7Y",
+      "seiyuuIds": [
+        "aimi"
+      ],
+      "date": "2026-11-25",
+      "time": "21:00",
+      "title": "愛美「What’s up FIRE!」Live Video  (from 「AIMI LIVE TOUR 2025 “NEW WORLD” 」at なんばHatch)",
+      "category": "program",
+      "source": "youtube",
+      "note": "AIMI official YouTube Channel · 公式YouTube",
+      "url": "https://www.youtube.com/watch?v=zrpdgy2vX7Y"
+    },
+    {
+      "id": "anilist:211778:ep8",
       "seiyuuIds": [
         "tachibana-azusa"
       ],
@@ -76,11 +206,102 @@
       "title": "世界最強の魔女、始めました 第8話",
       "category": "anime",
       "source": "anilist",
-      "note": "CV: ローナ・ハーミット",
+      "note": "CV: ローナ・ハーミット（橘杏咲）",
       "url": "https://anilist.co/anime/211778"
     },
     {
-      "id": "anilist:tachibana-azusa:209219:ep9",
+      "id": "rule:aimi:yakousei-jiron:2026-11-27",
+      "seiyuuIds": [
+        "aimi"
+      ],
+      "date": "2026-11-27",
+      "time": "23:00",
+      "title": "愛美と千春の夜行性自論",
+      "category": "radio",
+      "source": "rule",
+      "note": "毎週金曜 23:00配信 · AuDee Podcasts Membership（愛美・千春）",
+      "url": "https://audee-membership.jp/"
+    },
+    {
+      "id": "anilist:204650:ep9",
+      "seiyuuIds": [
+        "aimi"
+      ],
+      "date": "2026-11-27",
+      "time": "23:30",
+      "title": "桃源暗鬼 日光・華厳の滝編 第9話",
+      "category": "anime",
+      "source": "anilist",
+      "note": "CV: 漣水鶏（愛美）",
+      "url": "https://anilist.co/anime/204650"
+    },
+    {
+      "id": "tweet:aimi:2123702912589140066",
+      "seiyuuIds": [
+        "aimi"
+      ],
+      "date": "2026-11-28",
+      "time": "15:00",
+      "title": "定期FC生配信『OKOMAISON』おしゃべり生配信（11月）",
+      "category": "program",
+      "source": "tweet",
+      "note": "15:00頃〜 · FC『OKOMAISON』会員限定",
+      "url": "https://x.com/aimistaff/status/2123702912589140066"
+    },
+    {
+      "id": "eventernote:501072",
+      "seiyuuIds": [
+        "aimi"
+      ],
+      "date": "2026-11-29",
+      "time": "13:30",
+      "title": "愛美と千春の夜行性自論 番組イベント「〜エーデルダイアローグⅡ〜」〈第1部〉",
+      "category": "event",
+      "source": "eventernote",
+      "note": "開場 13:00 / 開演 13:30 / 終演 15:00 · ESPエンタテインメント東京 本館ホール",
+      "url": "https://www.eventernote.com/events/501072"
+    },
+    {
+      "id": "eventernote:501073",
+      "seiyuuIds": [
+        "aimi"
+      ],
+      "date": "2026-11-29",
+      "time": "16:30",
+      "title": "愛美と千春の夜行性自論 番組イベント「〜エーデルダイアローグⅡ〜」〈第2部〉",
+      "category": "event",
+      "source": "eventernote",
+      "note": "開場 16:00 / 開演 16:30 / 終演 18:00 · ESPエンタテインメント東京 本館ホール",
+      "url": "https://www.eventernote.com/events/501073"
+    },
+    {
+      "id": "eventernote:501074",
+      "seiyuuIds": [
+        "aimi"
+      ],
+      "date": "2026-11-29",
+      "time": "19:30",
+      "title": "愛美と千春の夜行性自論 番組イベント「〜エーデルダイアローグⅡ〜」〈第3部〉",
+      "category": "event",
+      "source": "eventernote",
+      "note": "開場 19:00 / 開演 19:30 / 終演 21:00 · ESPエンタテインメント東京 本館ホール",
+      "url": "https://www.eventernote.com/events/501074"
+    },
+    {
+      "id": "rule:aimi:kizuna-radio:2026-11-30",
+      "seiyuuIds": [
+        "aimi"
+      ],
+      "date": "2026-11-30",
+      "time": "20:30",
+      "title": "話しTARINAI！キズナラジオ！",
+      "category": "radio",
+      "source": "rule",
+      "note": "毎週月曜 20:30〜21:00 · ニッポン放送（翌火曜 HiBiKi 配信）",
+      "url": "https://www.1242.com/"
+    },
+    {
+      "id": "anilist:209219:ep9",
       "seiyuuIds": [
         "tachibana-azusa"
       ],
@@ -89,7 +310,7 @@
       "title": "転生ゴブリンだけど質問ある？ 第9話",
       "category": "anime",
       "source": "anilist",
-      "note": "CV: クロエ",
+      "note": "CV: クロエ（橘杏咲）",
       "url": "https://anilist.co/anime/209219"
     },
     {
@@ -106,7 +327,7 @@
       "url": "https://seigura.com/"
     },
     {
-      "id": "anilist:tachibana-azusa:211778:ep9",
+      "id": "anilist:211778:ep9",
       "seiyuuIds": [
         "tachibana-azusa"
       ],
@@ -115,11 +336,63 @@
       "title": "世界最強の魔女、始めました 第9話",
       "category": "anime",
       "source": "anilist",
-      "note": "CV: ローナ・ハーミット",
+      "note": "CV: ローナ・ハーミット（橘杏咲）",
       "url": "https://anilist.co/anime/211778"
     },
     {
-      "id": "anilist:tachibana-azusa:209219:ep10",
+      "id": "rule:aimi:yakousei-jiron:2026-12-04",
+      "seiyuuIds": [
+        "aimi"
+      ],
+      "date": "2026-12-04",
+      "time": "23:00",
+      "title": "愛美と千春の夜行性自論",
+      "category": "radio",
+      "source": "rule",
+      "note": "毎週金曜 23:00配信 · AuDee Podcasts Membership（愛美・千春）",
+      "url": "https://audee-membership.jp/"
+    },
+    {
+      "id": "anilist:204650:ep10",
+      "seiyuuIds": [
+        "aimi"
+      ],
+      "date": "2026-12-04",
+      "time": "23:30",
+      "title": "桃源暗鬼 日光・華厳の滝編 第10話",
+      "category": "anime",
+      "source": "anilist",
+      "note": "CV: 漣水鶏（愛美）",
+      "url": "https://anilist.co/anime/204650"
+    },
+    {
+      "id": "eventernote:482704",
+      "seiyuuIds": [
+        "aimi"
+      ],
+      "date": "2026-12-05",
+      "time": "17:00",
+      "title": "AIMI ASIA TOUR 2026「STAR RISING」in TAIPEI",
+      "category": "event",
+      "source": "eventernote",
+      "note": "開場 16:00 / 開演 17:00 / 終演 18:30 · MOONDOG(Breeze MEGA Studio)",
+      "url": "https://www.eventernote.com/events/482704"
+    },
+    {
+      "id": "rule:aimi:kizuna-radio:2026-12-07",
+      "seiyuuIds": [
+        "aimi"
+      ],
+      "date": "2026-12-07",
+      "time": "20:30",
+      "title": "話しTARINAI！キズナラジオ！",
+      "category": "radio",
+      "source": "rule",
+      "note": "毎週月曜 20:30〜21:00 · ニッポン放送（翌火曜 HiBiKi 配信）",
+      "url": "https://www.1242.com/"
+    },
+    {
+      "id": "anilist:209219:ep10",
       "seiyuuIds": [
         "tachibana-azusa"
       ],
@@ -128,11 +401,11 @@
       "title": "転生ゴブリンだけど質問ある？ 第10話",
       "category": "anime",
       "source": "anilist",
-      "note": "CV: クロエ",
+      "note": "CV: クロエ（橘杏咲）",
       "url": "https://anilist.co/anime/209219"
     },
     {
-      "id": "anilist:tachibana-azusa:211778:ep10",
+      "id": "anilist:211778:ep10",
       "seiyuuIds": [
         "tachibana-azusa"
       ],
@@ -141,13 +414,40 @@
       "title": "世界最強の魔女、始めました 第10話",
       "category": "anime",
       "source": "anilist",
-      "note": "CV: ローナ・ハーミット",
+      "note": "CV: ローナ・ハーミット（橘杏咲）",
       "url": "https://anilist.co/anime/211778"
     },
     {
-      "id": "eventernote:tachibana-azusa:475030",
+      "id": "rule:aimi:yakousei-jiron:2026-12-11",
       "seiyuuIds": [
-        "tachibana-azusa"
+        "aimi"
+      ],
+      "date": "2026-12-11",
+      "time": "23:00",
+      "title": "愛美と千春の夜行性自論",
+      "category": "radio",
+      "source": "rule",
+      "note": "毎週金曜 23:00配信 · AuDee Podcasts Membership（愛美・千春）",
+      "url": "https://audee-membership.jp/"
+    },
+    {
+      "id": "anilist:204650:ep11",
+      "seiyuuIds": [
+        "aimi"
+      ],
+      "date": "2026-12-11",
+      "time": "23:30",
+      "title": "桃源暗鬼 日光・華厳の滝編 第11話",
+      "category": "anime",
+      "source": "anilist",
+      "note": "CV: 漣水鶏（愛美）",
+      "url": "https://anilist.co/anime/204650"
+    },
+    {
+      "id": "eventernote:475030",
+      "seiyuuIds": [
+        "tachibana-azusa",
+        "aimi"
       ],
       "date": "2026-12-13",
       "time": "14:45",
@@ -158,7 +458,20 @@
       "url": "https://www.eventernote.com/events/475030"
     },
     {
-      "id": "anilist:tachibana-azusa:209219:ep11",
+      "id": "rule:aimi:kizuna-radio:2026-12-14",
+      "seiyuuIds": [
+        "aimi"
+      ],
+      "date": "2026-12-14",
+      "time": "20:30",
+      "title": "話しTARINAI！キズナラジオ！",
+      "category": "radio",
+      "source": "rule",
+      "note": "毎週月曜 20:30〜21:00 · ニッポン放送（翌火曜 HiBiKi 配信）",
+      "url": "https://www.1242.com/"
+    },
+    {
+      "id": "anilist:209219:ep11",
       "seiyuuIds": [
         "tachibana-azusa"
       ],
@@ -167,11 +480,11 @@
       "title": "転生ゴブリンだけど質問ある？ 第11話",
       "category": "anime",
       "source": "anilist",
-      "note": "CV: クロエ",
+      "note": "CV: クロエ（橘杏咲）",
       "url": "https://anilist.co/anime/209219"
     },
     {
-      "id": "anilist:tachibana-azusa:211778:ep11",
+      "id": "anilist:211778:ep11",
       "seiyuuIds": [
         "tachibana-azusa"
       ],
@@ -180,11 +493,37 @@
       "title": "世界最強の魔女、始めました 第11話",
       "category": "anime",
       "source": "anilist",
-      "note": "CV: ローナ・ハーミット",
+      "note": "CV: ローナ・ハーミット（橘杏咲）",
       "url": "https://anilist.co/anime/211778"
     },
     {
-      "id": "eventernote:tachibana-azusa:497071",
+      "id": "rule:aimi:yakousei-jiron:2026-12-18",
+      "seiyuuIds": [
+        "aimi"
+      ],
+      "date": "2026-12-18",
+      "time": "23:00",
+      "title": "愛美と千春の夜行性自論",
+      "category": "radio",
+      "source": "rule",
+      "note": "毎週金曜 23:00配信 · AuDee Podcasts Membership（愛美・千春）",
+      "url": "https://audee-membership.jp/"
+    },
+    {
+      "id": "anilist:204650:ep12",
+      "seiyuuIds": [
+        "aimi"
+      ],
+      "date": "2026-12-18",
+      "time": "23:30",
+      "title": "桃源暗鬼 日光・華厳の滝編 第12話",
+      "category": "anime",
+      "source": "anilist",
+      "note": "CV: 漣水鶏（愛美）",
+      "url": "https://anilist.co/anime/204650"
+    },
+    {
+      "id": "eventernote:497071",
       "seiyuuIds": [
         "tachibana-azusa"
       ],
@@ -197,7 +536,20 @@
       "url": "https://www.eventernote.com/events/497071"
     },
     {
-      "id": "anilist:tachibana-azusa:209219:ep12",
+      "id": "rule:aimi:kizuna-radio:2026-12-21",
+      "seiyuuIds": [
+        "aimi"
+      ],
+      "date": "2026-12-21",
+      "time": "20:30",
+      "title": "話しTARINAI！キズナラジオ！",
+      "category": "radio",
+      "source": "rule",
+      "note": "毎週月曜 20:30〜21:00 · ニッポン放送（翌火曜 HiBiKi 配信）",
+      "url": "https://www.1242.com/"
+    },
+    {
+      "id": "anilist:209219:ep12",
       "seiyuuIds": [
         "tachibana-azusa"
       ],
@@ -206,11 +558,11 @@
       "title": "転生ゴブリンだけど質問ある？ 第12話",
       "category": "anime",
       "source": "anilist",
-      "note": "CV: クロエ",
+      "note": "CV: クロエ（橘杏咲）",
       "url": "https://anilist.co/anime/209219"
     },
     {
-      "id": "anilist:tachibana-azusa:211778:ep12",
+      "id": "anilist:211778:ep12",
       "seiyuuIds": [
         "tachibana-azusa"
       ],
@@ -219,8 +571,73 @@
       "title": "世界最強の魔女、始めました 第12話",
       "category": "anime",
       "source": "anilist",
-      "note": "CV: ローナ・ハーミット",
+      "note": "CV: ローナ・ハーミット（橘杏咲）",
       "url": "https://anilist.co/anime/211778"
+    },
+    {
+      "id": "eventernote:488447",
+      "seiyuuIds": [
+        "aimi"
+      ],
+      "date": "2026-12-25",
+      "time": "18:30",
+      "title": "AIMI ASIA TOUR 2026「STAR RISING」東京公演",
+      "category": "event",
+      "source": "eventernote",
+      "note": "開場 17:45 / 開演 18:30 / 終演 20:30 · ルネこだいら 大ホール",
+      "url": "https://www.eventernote.com/events/488447"
+    },
+    {
+      "id": "rule:aimi:yakousei-jiron:2026-12-25",
+      "seiyuuIds": [
+        "aimi"
+      ],
+      "date": "2026-12-25",
+      "time": "23:00",
+      "title": "愛美と千春の夜行性自論",
+      "category": "radio",
+      "source": "rule",
+      "note": "毎週金曜 23:00配信 · AuDee Podcasts Membership（愛美・千春）",
+      "url": "https://audee-membership.jp/"
+    },
+    {
+      "id": "eventernote:498141",
+      "seiyuuIds": [
+        "aimi"
+      ],
+      "date": "2026-12-26",
+      "time": "13:30",
+      "title": "AIMI TALK EVENT 〜星々の宴〜 昼公演",
+      "category": "event",
+      "source": "eventernote",
+      "note": "開場 13:00 / 開演 13:30 / 終演 15:00 · 1000CLUB(新店舗)",
+      "url": "https://www.eventernote.com/events/498141"
+    },
+    {
+      "id": "eventernote:498142",
+      "seiyuuIds": [
+        "aimi"
+      ],
+      "date": "2026-12-26",
+      "time": "16:00",
+      "title": "AIMI TALK EVENT 〜星々の宴〜 夜公演",
+      "category": "event",
+      "source": "eventernote",
+      "note": "開場 15:30 / 開演 16:00 / 終演 17:30 · 1000CLUB(新店舗)",
+      "url": "https://www.eventernote.com/events/498142"
+    },
+    {
+      "id": "rule:aimi:kizuna-radio:2026-12-28",
+      "seiyuuIds": [
+        "aimi"
+      ],
+      "date": "2026-12-28",
+      "time": "20:30",
+      "title": "話しTARINAI！キズナラジオ！",
+      "category": "radio",
+      "source": "rule",
+      "note": "毎週月曜 20:30〜21:00 · ニッポン放送（翌火曜 HiBiKi 配信）",
+      "url": "https://www.1242.com/"
     },
     {
       "id": "rule:tachibana-azusa:seigura-column:2027-01-01",
@@ -234,6 +651,136 @@
       "source": "rule",
       "note": "毎月1日更新 · seigura.com",
       "url": "https://seigura.com/"
+    },
+    {
+      "id": "rule:aimi:yakousei-jiron:2027-01-01",
+      "seiyuuIds": [
+        "aimi"
+      ],
+      "date": "2027-01-01",
+      "time": "23:00",
+      "title": "愛美と千春の夜行性自論",
+      "category": "radio",
+      "source": "rule",
+      "note": "毎週金曜 23:00配信 · AuDee Podcasts Membership（愛美・千春）",
+      "url": "https://audee-membership.jp/"
+    },
+    {
+      "id": "rule:aimi:kizuna-radio:2027-01-04",
+      "seiyuuIds": [
+        "aimi"
+      ],
+      "date": "2027-01-04",
+      "time": "20:30",
+      "title": "話しTARINAI！キズナラジオ！",
+      "category": "radio",
+      "source": "rule",
+      "note": "毎週月曜 20:30〜21:00 · ニッポン放送（翌火曜 HiBiKi 配信）",
+      "url": "https://www.1242.com/"
+    },
+    {
+      "id": "eventernote:486245",
+      "seiyuuIds": [
+        "aimi"
+      ],
+      "date": "2027-01-08",
+      "time": "13:00",
+      "title": "ブシロード新春大発表会2027",
+      "category": "event",
+      "source": "eventernote",
+      "note": "開場 11:30 / 開演 13:00 / 終演 18:00 · Kanadevia Hall(TOKYO DOME CITY HALL)",
+      "url": "https://www.eventernote.com/events/486245"
+    },
+    {
+      "id": "rule:aimi:yakousei-jiron:2027-01-08",
+      "seiyuuIds": [
+        "aimi"
+      ],
+      "date": "2027-01-08",
+      "time": "23:00",
+      "title": "愛美と千春の夜行性自論",
+      "category": "radio",
+      "source": "rule",
+      "note": "毎週金曜 23:00配信 · AuDee Podcasts Membership（愛美・千春）",
+      "url": "https://audee-membership.jp/"
+    },
+    {
+      "id": "rule:aimi:kizuna-radio:2027-01-11",
+      "seiyuuIds": [
+        "aimi"
+      ],
+      "date": "2027-01-11",
+      "time": "20:30",
+      "title": "話しTARINAI！キズナラジオ！",
+      "category": "radio",
+      "source": "rule",
+      "note": "毎週月曜 20:30〜21:00 · ニッポン放送（翌火曜 HiBiKi 配信）",
+      "url": "https://www.1242.com/"
+    },
+    {
+      "id": "rule:aimi:yakousei-jiron:2027-01-15",
+      "seiyuuIds": [
+        "aimi"
+      ],
+      "date": "2027-01-15",
+      "time": "23:00",
+      "title": "愛美と千春の夜行性自論",
+      "category": "radio",
+      "source": "rule",
+      "note": "毎週金曜 23:00配信 · AuDee Podcasts Membership（愛美・千春）",
+      "url": "https://audee-membership.jp/"
+    },
+    {
+      "id": "rule:aimi:kizuna-radio:2027-01-18",
+      "seiyuuIds": [
+        "aimi"
+      ],
+      "date": "2027-01-18",
+      "time": "20:30",
+      "title": "話しTARINAI！キズナラジオ！",
+      "category": "radio",
+      "source": "rule",
+      "note": "毎週月曜 20:30〜21:00 · ニッポン放送（翌火曜 HiBiKi 配信）",
+      "url": "https://www.1242.com/"
+    },
+    {
+      "id": "rule:aimi:yakousei-jiron:2027-01-22",
+      "seiyuuIds": [
+        "aimi"
+      ],
+      "date": "2027-01-22",
+      "time": "23:00",
+      "title": "愛美と千春の夜行性自論",
+      "category": "radio",
+      "source": "rule",
+      "note": "毎週金曜 23:00配信 · AuDee Podcasts Membership（愛美・千春）",
+      "url": "https://audee-membership.jp/"
+    },
+    {
+      "id": "rule:aimi:kizuna-radio:2027-01-25",
+      "seiyuuIds": [
+        "aimi"
+      ],
+      "date": "2027-01-25",
+      "time": "20:30",
+      "title": "話しTARINAI！キズナラジオ！",
+      "category": "radio",
+      "source": "rule",
+      "note": "毎週月曜 20:30〜21:00 · ニッポン放送（翌火曜 HiBiKi 配信）",
+      "url": "https://www.1242.com/"
+    },
+    {
+      "id": "tweet:aimi:2125552581556465762",
+      "seiyuuIds": [
+        "aimi"
+      ],
+      "date": "2027-02-13",
+      "time": "16:00",
+      "title": "アニソン・クロスライブ in 一宮",
+      "category": "event",
+      "source": "tweet",
+      "note": "開場 15:15 / 開演 16:00 · 一宮市民会館 ホール（森口博子・angela・愛美）",
+      "url": "https://x.com/aimistaff/status/2125552581556465762"
     }
   ]
 }

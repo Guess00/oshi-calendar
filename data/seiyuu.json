@@ -51,6 +51,66 @@
           "url": "https://seigura.com/"
         }
       ]
+    },
+    {
+      "id": "aimi",
+      "name": "愛美",
+      "kana": "あいみ",
+      "romaji": "Aimi",
+      "agency": "響",
+      "agencyUrl": "https://www.aimi.info/",
+      "accentColor": "#d94f70",
+      "accentSoft": "#ffedf2",
+      "avatar": "assets/avatars/aimi.jpg",
+      "xHandle": "aimi_sound",
+      "xUrl": "https://x.com/aimi_sound",
+      "showInTweetTab": true,
+      "mergedXHandles": [
+        {
+          "handle": "aimistaff",
+          "role": "staff",
+          "badge": "Staff",
+          "label": "愛美 Staff",
+          "url": "https://x.com/aimistaff"
+        }
+      ],
+      "scheduleOnlyXHandles": [],
+      "anilistSearch": "Aimi",
+      "anilistId": 109519,
+      "eventernoteId": "2806",
+      "eventernoteName": "愛美",
+      "youtubeChannels": [
+        {
+          "name": "AIMI official YouTube Channel",
+          "handle": "@aimin_official",
+          "channelId": "UCmgiVTON--n28U6yO7WHs9Q",
+          "keywords": [],
+          "category": "program",
+          "label": "公式YouTube"
+        }
+      ],
+      "recurringRules": [
+        {
+          "id": "kizuna-radio",
+          "type": "weekly",
+          "weekday": 1,
+          "time": "20:30",
+          "title": "話しTARINAI！キズナラジオ！",
+          "category": "radio",
+          "note": "毎週月曜 20:30〜21:00 · ニッポン放送（翌火曜 HiBiKi 配信）",
+          "url": "https://www.1242.com/"
+        },
+        {
+          "id": "yakousei-jiron",
+          "type": "weekly",
+          "weekday": 5,
+          "time": "23:00",
+          "title": "愛美と千春の夜行性自論",
+          "category": "radio",
+          "note": "毎週金曜 23:00配信 · AuDee Podcasts Membership（愛美・千春）",
+          "url": "https://audee-membership.jp/"
+        }
+      ]
     }
   ]
 }
