@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T03:58:48+09:00",
+  "updatedAt": "2026-11-27T01:00:00+09:00",
   "events": [
     {
       "id": "youtube:aimi:WAggkIoRwCQ",
@@ -338,6 +338,19 @@
       "source": "anilist",
       "note": "CV: ローナ・ハーミット（橘杏咲）",
       "url": "https://anilist.co/anime/211778"
+    },
+    {
+      "id": "tweet:tachibana-azusa:2125931230504042835",
+      "seiyuuIds": [
+        "tachibana-azusa"
+      ],
+      "date": "2026-12-03",
+      "time": "00:00",
+      "title": "『世界最強の魔女、始めました』OP「影響力∞アイドル」ローナ・ハーミット（CV：橘杏咲）カバーVer. 配信開始",
+      "category": "other",
+      "source": "tweet",
+      "note": "00:00〜 各種音楽配信サイトにて配信開始",
+      "url": "https://x.com/anzusaku1012/status/2125931230504042835"
     },
     {
       "id": "rule:aimi:yakousei-jiron:2026-12-04",

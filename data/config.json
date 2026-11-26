@@ -4,6 +4,6 @@
   "repoName": "oshi-calendar",
   "githubOwner": "Guess00",
   "timezone": "Asia/Tokyo",
-  "pushMode": "W1",
+  "pushMode": "W2",
   "scheduleWindowDays": 7
 }

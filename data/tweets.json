@@ -1,12 +1,20 @@
 {
-  "updatedAt": "2026-11-26T03:58:48+09:00",
+  "updatedAt": "2026-11-27T01:00:00+09:00",
   "accounts": {
     "tachibana-azusa": {
       "handle": "anzusaku1012",
       "profileUrl": "https://x.com/anzusaku1012",
-      "lastCheckedAt": "2026-11-26T03:58:48+09:00",
-      "newCount": 0,
+      "lastCheckedAt": "2026-11-27T01:00:00+09:00",
+      "newCount": 1,
       "items": [
+        {
+          "id": "2125931230504042835",
+          "type": "quote",
+          "postedAtJst": "2026-11-26 21:34",
+          "timePrecision": "minute",
+          "summary": "引用官推宣传《世界最强魔女》OP角色翻唱版将于12/3起配信",
+          "url": "https://x.com/anzusaku1012/status/2125931230504042835"
+        },
         {
           "id": "2125577209469640974",
           "type": "original",
@@ -199,9 +207,33 @@
         "aimistaff"
       ],
       "profileUrl": "https://x.com/aimi_sound",
-      "lastCheckedAt": "2026-11-26T03:58:48+09:00",
-      "newCount": 0,
+      "lastCheckedAt": "2026-11-27T01:00:00+09:00",
+      "newCount": 2,
       "items": [
+        {
+          "id": "2125952965953663005",
+          "type": "quote",
+          "postedAtJst": "2026-11-26 23:01",
+          "timePrecision": "minute",
+          "summary": "转发一宫市民会馆公告，期待与前辈同台出演来年2/13拼盘Live",
+          "url": "https://x.com/aimi_sound/status/2125952965953663005",
+          "accountRole": "self",
+          "accountHandle": "aimi_sound",
+          "accountBadge": "本人",
+          "media": "photo",
+          "mediaCount": 1
+        },
+        {
+          "id": "2125780688721133999",
+          "type": "quote",
+          "postedAtJst": "2026-11-26 11:36",
+          "timePrecision": "minute",
+          "summary": "通知周末广播活动《夜行性自论》门票一般发售，将首唱爱美作词新曲",
+          "url": "https://x.com/aimi_sound/status/2125780688721133999",
+          "accountRole": "self",
+          "accountHandle": "aimi_sound",
+          "accountBadge": "本人"
+        },
         {
           "id": "2125597444402729184",
           "type": "original",
