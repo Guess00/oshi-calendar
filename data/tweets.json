@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-11-27T01:00:00+09:00",
+  "updatedAt": "2026-11-28T03:46:00+09:00",
   "accounts": {
     "tachibana-azusa": {
       "handle": "anzusaku1012",
       "profileUrl": "https://x.com/anzusaku1012",
-      "lastCheckedAt": "2026-11-27T01:00:00+09:00",
-      "newCount": 1,
+      "lastCheckedAt": "2026-11-28T03:46:00+09:00",
+      "newCount": 0,
       "items": [
         {
           "id": "2125931230504042835",
@@ -207,9 +207,68 @@
         "aimistaff"
       ],
       "profileUrl": "https://x.com/aimi_sound",
-      "lastCheckedAt": "2026-11-27T01:00:00+09:00",
-      "newCount": 2,
+      "lastCheckedAt": "2026-11-28T03:46:00+09:00",
+      "newCount": 5,
       "items": [
+        {
+          "id": "2126340436952580431",
+          "type": "quote",
+          "postedAtJst": "2026-11-28 00:40",
+          "timePrecision": "minute",
+          "summary": "引用官推提醒11/29夜行性自论活动并征集投稿，一般门票热卖中",
+          "url": "https://x.com/aimi_sound/status/2126340436952580431",
+          "accountRole": "self",
+          "accountHandle": "aimi_sound",
+          "accountBadge": "本人",
+          "media": "photo",
+          "mediaCount": 1
+        },
+        {
+          "id": "2126337843966685485",
+          "type": "quote",
+          "postedAtJst": "2026-11-28 00:30",
+          "timePrecision": "minute",
+          "summary": "引用《桃源暗鬼》第9话预告，感谢大家收看今晚播出",
+          "url": "https://x.com/aimi_sound/status/2126337843966685485",
+          "accountRole": "self",
+          "accountHandle": "aimi_sound",
+          "accountBadge": "本人"
+        },
+        {
+          "id": "2126322889553293427",
+          "type": "original",
+          "postedAtJst": "2026-11-27 23:30",
+          "timePrecision": "minute",
+          "summary": "发推询问粉丝最推哪位造型并附上FC「OKOMAISON」链接",
+          "url": "https://x.com/aimi_sound/status/2126322889553293427",
+          "accountRole": "self",
+          "accountHandle": "aimi_sound",
+          "accountBadge": "本人"
+        },
+        {
+          "id": "2126269825878307087",
+          "type": "original",
+          "postedAtJst": "2026-11-27 20:00",
+          "timePrecision": "minute",
+          "summary": "预告明日11/28 15:00左右举行FC限定「おしゃべり生配信」",
+          "url": "https://x.com/aimistaff/status/2126269825878307087",
+          "accountRole": "staff",
+          "accountHandle": "aimistaff",
+          "accountBadge": "Staff"
+        },
+        {
+          "id": "2126194397889090027",
+          "type": "quote",
+          "postedAtJst": "2026-11-27 15:00",
+          "timePrecision": "minute",
+          "summary": "引用髙桥ミナミ推文分享密室逃脱repo，开心久违畅玩",
+          "url": "https://x.com/aimi_sound/status/2126194397889090027",
+          "accountRole": "self",
+          "accountHandle": "aimi_sound",
+          "accountBadge": "本人",
+          "media": "photo",
+          "mediaCount": 2
+        },
         {
           "id": "2125952965953663005",
           "type": "quote",

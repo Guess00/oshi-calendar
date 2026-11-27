@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T01:00:00+09:00",
+  "updatedAt": "2026-11-28T03:46:00+09:00",
   "events": [
     {
       "id": "youtube:aimi:WAggkIoRwCQ",
@@ -26,32 +26,6 @@
       "source": "youtube",
       "note": "GA文庫チャンネル · パジャナイ",
       "url": "https://www.youtube.com/watch?v=6VDgl5LxVqE"
-    },
-    {
-      "id": "rule:aimi:yakousei-jiron:2026-11-13",
-      "seiyuuIds": [
-        "aimi"
-      ],
-      "date": "2026-11-13",
-      "time": "23:00",
-      "title": "愛美と千春の夜行性自論",
-      "category": "radio",
-      "source": "rule",
-      "note": "毎週金曜 23:00配信 · AuDee Podcasts Membership（愛美・千春）",
-      "url": "https://audee-membership.jp/"
-    },
-    {
-      "id": "anilist:204650:ep7",
-      "seiyuuIds": [
-        "aimi"
-      ],
-      "date": "2026-11-13",
-      "time": "23:30",
-      "title": "桃源暗鬼 日光・華厳の滝編 第7話",
-      "category": "anime",
-      "source": "anilist",
-      "note": "CV: 漣水鶏（愛美）",
-      "url": "https://anilist.co/anime/204650"
     },
     {
       "id": "eventernote:482709",
@@ -390,6 +364,19 @@
       "source": "eventernote",
       "note": "開場 16:00 / 開演 17:00 / 終演 18:30 · MOONDOG(Breeze MEGA Studio)",
       "url": "https://www.eventernote.com/events/482704"
+    },
+    {
+      "id": "tweet:aimi:2125930639308497250",
+      "seiyuuIds": [
+        "aimi"
+      ],
+      "date": "2026-12-07",
+      "time": "19:00",
+      "title": "9.5周年記念！みんなでHop-Step-10th！ミリシタ生配信！",
+      "category": "program",
+      "source": "tweet",
+      "note": "19:00〜（予定） · 出演：愛美・雨宮天・今井麻美",
+      "url": "https://x.com/imasml_theater/status/2125930639308497250"
     },
     {
       "id": "rule:aimi:kizuna-radio:2026-12-07",
